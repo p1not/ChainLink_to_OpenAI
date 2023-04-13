@@ -1,3 +1,12 @@
+# How to ask to ChatGPR from a Smart Contract
+
+## Description
+
+The purposal of this project is to demonstrate how to send request from a Smart Contract in a blockchain, to the OpenAI API. The project utilize HardHat to simulate an Ethereum Environment, deploy and, verify with Etherscan API, the Smart Contract in the Sepolia Ethereum network. The HTTP POST requests are sent throw the oracle ChainLink Any API, to OpenAI API. In this case, we gonna ask ChatGPT to sugest a super hero name, them write the answer in a storage variable in the Smart Contract.
+The deployed contract can be found at https://sepolia.etherscan.io/address/0x496C97643dc24e580F50ab9411F056168C15E0E2
+
+
+
 # Chainlink Functions Starter Kit
 
 - [Chainlink Functions Starter Kit](#chainlink-functions-starter-kit)
