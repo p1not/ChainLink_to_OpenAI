@@ -256,3 +256,4 @@ To manually trigger a request, use the command `npx hardhat functions-perform-up
 
 # Result
   
+<img src="https://github.com/p1not/ChainLink_to_OpenAI/blob/main/imgs/result_chainlink_openai.jpg?raw=true" width=90% > 
