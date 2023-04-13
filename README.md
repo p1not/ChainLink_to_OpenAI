@@ -1,12 +1,9 @@
 # How to ask to ChatGPR from a Smart Contract
 
+The purposal of this project is to demonstrate how to send request from a Smart Contract inside a blockchain, to the OpenAI API. This project utilize HardHat to simulate an Ethereum Environment, deploy the Smart Contract in the Sepolia Ethereum network, and verify it with Etherscan API. The HTTP POST requests are sent through the oracle ChainLink Function Any API, to OpenAI API. 
+To test the functionality, we gonna ask ChatGPT to sugest a super hero name,  than write the answer in a storage variable in the Smart Contract.
 
-## About
-
-The purposal of this project is to demonstrate how to send request from a Smart Contract in a blockchain, to the OpenAI API. The project utilize HardHat to simulate an Ethereum Environment, deploy and, verify with Etherscan API, the Smart Contract in the Sepolia Ethereum network. The HTTP POST requests are sent throw the oracle ChainLink Any API, to OpenAI API. In this case, we gonna ask ChatGPT to sugest a super hero name, them write the answer in a storage variable in the Smart Contract.
-The deployed contract can be found at https://sepolia.etherscan.io/address/0x496C97643dc24e580F50ab9411F056168C15E0E2
-
-
+The deployed contract can be audited at https://sepolia.etherscan.io/address/0x496C97643dc24e580F50ab9411F056168C15E0E2
 
 # Chainlink Functions Starter Kit
 
@@ -30,7 +27,7 @@ The deployed contract can be found at https://sepolia.etherscan.io/address/0x496
 
 # Overview
 
-<p><b>This project is currently in a closed beta. Request access to send on-chain requests here <a href="https://functions.chain.link/">https://functions.chain.link/</a></b></p>
+<p><b>Chainlink Functions is currently in a closed beta. Request access to send on-chain requests here <a href="https://functions.chain.link/">https://functions.chain.link/</a></b></p>
 
 <p>Chainlink Functions allows users to request data from almost any API and perform custom computation using JavaScript.</p>
 <p>It works by using a <a href="https://chain.link/education/blockchain-oracles#decentralized-oracles">decentralized oracle network</a> (DON).<br>When a request is initiated, each node in the DON executes the user-provided JavaScript code simultaneously.  Then, nodes use the <a href="https://docs.chain.link/architecture-overview/off-chain-reporting/">Chainlink OCR</a> protocol to come to consensus on the results.  Finally, the median result is returned to the requesting contract via a callback function.</p>
@@ -256,3 +253,6 @@ Once the contract is registered for upkeep, check the latest response or error w
 
 For debugging, use the command `npx hardhat functions-check-upkeep --network network_name_here --contract contract_address_here` to see if Automation needs to call _performUpkeep_.
 To manually trigger a request, use the command `npx hardhat functions-perform-upkeep --network network_name_here --contract contract_address_here`.
+
+# Result
+  
