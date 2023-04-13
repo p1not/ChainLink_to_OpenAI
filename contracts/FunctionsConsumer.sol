@@ -16,7 +16,8 @@ contract FunctionsConsumer is FunctionsClient, ConfirmedOwner {
   bytes32 public latestRequestId;
   bytes public latestResponse;
   bytes public latestError;
-
+  string public ultimoNomeGerado; //RAC-20230412
+  event evtRetSuperHeroName(string name); //RAC-20230412
   event OCRResponse(bytes32 indexed requestId, bytes result, bytes err);
 
   /**
@@ -68,6 +69,8 @@ contract FunctionsConsumer is FunctionsClient, ConfirmedOwner {
   function fulfillRequest(bytes32 requestId, bytes memory response, bytes memory err) internal override {
     latestResponse = response;
     latestError = err;
+    ultimoNomeGerado = string(abi.encodePacked(response)); //RAC-20230412 - save the received value in the contract variable
+    emit evtRetSuperHeroName(ultimoNomeGerado); //RAC-20230412
     emit OCRResponse(requestId, response, err);
   }
 
